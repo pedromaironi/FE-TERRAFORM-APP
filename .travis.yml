@@ -20,7 +20,9 @@ script:
   - npm test
 
 before_deploy:
-  - npm run build
+  - echo "Running before deploy steps"
+  - npm run build  
+  - bash ./prepare_deploy.sh
 
 deploy:
   provider: script
