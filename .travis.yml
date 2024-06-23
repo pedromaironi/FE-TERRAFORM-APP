@@ -21,8 +21,6 @@ script:
 
 before_deploy:
   - echo "Running before deploy steps"
-  - npm run build  
-  - bash ./prepare_deploy.sh
 
 deploy:
   provider: script
