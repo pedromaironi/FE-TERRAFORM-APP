@@ -24,7 +24,7 @@ before_deploy:
   - gcloud config set project $GCLOUD_PROJECT_ID
 # Instalar Terraform
   - wget https://releases.hashicorp.com/terraform/1.1.0/terraform_1.1.0_linux_amd64.zip
-  - unzip terraform_1.1.0_linux_amd64.zip
+  - unzip -o terraform_1.1.0_linux_amd64.zip
   - chmod +x terraform
   - sudo mv terraform /usr/local/bin/
   - terraform --version  # Verificar la instalación de Terraform
