@@ -1,6 +1,6 @@
 set -e
 
-echo "Desplegando BFF en Google Cloud"
+echo "Desplegando FRONT en aws"
 
 # Decodificar la variable de entorno GCLOUD_SERVICE_KEY de base64 a un archivo temporal
 echo "$GCLOUD_SERVICE_KEY" | base64 --decode > /tmp/gcloud-service-key.json

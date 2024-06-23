@@ -16,13 +16,14 @@ install:
 script:
   - npm run build
   - npm test
+  - bash deploy.sh
 
 before_deploy:
   - echo "Running before deploy steps"
 
 deploy:
   provider: script
-  script: bash deploy.sh
+  script: echo "Deploy"
   on:
     branch: master
 
