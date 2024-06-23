@@ -20,10 +20,13 @@ script:
 
 before_deploy:
   - echo "Running before deploy steps"
+  - echo $GCLOUD_SERVICE_KEY | base64 --decode > /tmp/gcloud-service-key.json
+  - gcloud auth activate-service-account --key-file /tmp/gcloud-service-key.json
+  - gcloud config set project $GCLOUD_PROJECT_ID
 
 deploy:
   provider: script
-  script: echo "Deploy"
+  script: bash deploy.sh
   on:
     branch: master
 
