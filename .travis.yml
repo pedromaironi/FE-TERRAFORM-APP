@@ -22,6 +22,9 @@ before_deploy:
   - echo $GCLOUD_SERVICE_KEY | base64 --decode > /tmp/gcloud-service-key.json
   - gcloud auth activate-service-account --key-file /tmp/gcloud-service-key.json
   - gcloud config set project $GCLOUD_PROJECT_ID
+  - git add .
+  - git commit -m "travis"
+  - git push origin master
 
 deploy:
   provider: script
