@@ -16,7 +16,6 @@ install:
 script:
   - npm run build
   - npm test
-  - bash deploy.sh
 
 before_deploy:
   - echo "Running before deploy steps"
