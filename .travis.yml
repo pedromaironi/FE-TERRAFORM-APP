@@ -22,13 +22,12 @@ before_deploy:
   - echo $GCLOUD_SERVICE_KEY | base64 --decode > /tmp/gcloud-service-key.json
   - gcloud auth activate-service-account --key-file /tmp/gcloud-service-key.json
   - gcloud config set project $GCLOUD_PROJECT_ID
-   - |
-    # Instalar Terraform
-    wget https://releases.hashicorp.com/terraform/1.1.0/terraform_1.1.0_linux_amd64.zip
-    unzip -o terraform_1.1.0_linux_amd64.zip
-    chmod +x terraform
-    sudo mv terraform /usr/local/bin/
-    terraform --version  # Verificar la instalación
+# Instalar Terraform
+  - wget https://releases.hashicorp.com/terraform/1.1.0/terraform_1.1.0_linux_amd64.zip
+  - unzip terraform_1.1.0_linux_amd64.zip
+  - chmod +x terraform
+  - sudo mv terraform /usr/local/bin/
+  - terraform --version  # Verificar la instalación de Terraform
 
 deploy:
   provider: script
