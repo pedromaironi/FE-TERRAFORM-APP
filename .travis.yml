@@ -22,7 +22,7 @@ script:
 before_deploy:
   - echo "Running before deploy steps"
   - wget https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip
-  - unzip terraform_0.12.29_linux_amd64.zip
+  - unzip -o terraform_0.12.29_linux_amd64.zip
   - sudo mv terraform /usr/local/bin/
 
 deploy:
