@@ -13,6 +13,7 @@ import { login } from '../../actions/auth.actions';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
+  // eslint-disable-next-line no-unused-vars
   const {products, loading} = useSelector((state) => state.products);
   const { token, isAuthenticated } = useSelector((state) => state.auth);
   const [currentProduct, setCurrentProduct] = useState(null);
