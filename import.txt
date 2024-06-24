@@ -1,0 +1,1 @@
+terraform import aws_s3_bucket.react_frontend_bucket bucket-react-pedro
