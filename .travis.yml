@@ -32,13 +32,13 @@ jobs:
         - docker tag $AWS_ECR_REGISTRY_NAME:latest $AWS_ECR_DOCKER_REGISTRY/$AWS_ECR_REGISTRY_NAME:latest
         - docker push $AWS_ECR_DOCKER_REGISTRY/$AWS_ECR_REGISTRY_NAME:latest
 
-      deploy:
-        provider: elasticbeanstalk
-        access_key_id: $AWS_ACCESS_KEY_ID
-        secret_access_key: $AWS_SECRET_ACCESS_KEY
-        region: $AWS_DEFAULT_REGION
-        app: $AWS_ELASTIC_BEANSTALK_APP_NAME
-        env: $AWS_ELASTIC_BEANSTALK_ENV_NAME
-        bucket_name: $AWS_ELASTIC_BEANSTALK_BUCKET_NAME
-        on:
-          branch: master
+      #deploy:
+      #  provider: elasticbeanstalk
+      #  access_key_id: $AWS_ACCESS_KEY_ID
+      #  secret_access_key: $AWS_SECRET_ACCESS_KEY
+      #  region: $AWS_DEFAULT_REGION
+      #  app: $AWS_ELASTIC_BEANSTALK_APP_NAME
+      #  env: $AWS_ELASTIC_BEANSTALK_ENV_NAME
+      #  bucket_name: $AWS_ELASTIC_BEANSTALK_BUCKET_NAME
+      #  on:
+      #    branch: master
