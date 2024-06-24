@@ -48,7 +48,7 @@ const Dashboard = () => {
     <div className="bg-gray-100 p-8 min-h-screen">
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-4 text-center">
-          Gestión de Productos
+          Gestión de Productos - Profesor. Ivan
         </h1>
 
         <div className="mb-4 text-right">
